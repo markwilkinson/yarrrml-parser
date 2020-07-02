@@ -1,0 +1,14 @@
+docker build -t yarrrml-parser-ejp .
+# the CMD for yarrrml-parser-ejp contains two environemnt variables:
+# PARSERIN the location of the input yarrrml file
+# PARSEROUT the loction to write the RML turtle file
+
+# cd into the folder with the data
+cd ../data/
+
+# set both environment variables
+# note that we're mounting "here" ($PWD) to the image's /data folder
+# so the environment variables need to be relative to that!
+docker run -e PARSERIN=/data/yarrrml.yaml -e PARSEROUT=/data/rmlrules.ttl --rm --name yarrrml-parser -v $PWD:/data yarrrml-parser-ejp:latest
+
+cat rmlrules.ttl 
