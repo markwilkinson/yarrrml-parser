@@ -7,12 +7,48 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Unreleased
 
+## [1.2.2] - 2021-02-23
+
+### Added
+- Logger to catch convert errors (see [issue 102](https://github.com/RMLio/yarrrml-parser/issues/102))
+
+### Fixed
+- Fix invalid input argument type array, in fs.watchFile()
+- Fix N3 addTriples() is not a function, in fs.watchFile()
+- Cannot find module rml2yarrrml when running yarrrml-generator (see [issue 106](https://github.com/RMLio/yarrrml-parser/issues/106))
+    - Language with template not converted to Language Map  (see [issue 107](https://github.com/RMLio/yarrrml-parser/issues/107))
+
+### Changed
+- Update dev deps
+- Update deps
+
+## [1.2.1] - 2020-09-04
+
+### Fixed
+- Fix docker build command in README (see [issue 91](https://github.com/RMLio/yarrrml-parser/issues/91))
+- Test example5 is invalid YARRRML (see [issue 93](https://github.com/RMLio/yarrrml-parser/issues/93))
+- Mapping TSV files (see [issue 95](https://github.com/RMLio/yarrrml-parser/issues/95))
+
+### Changed
+- Update dev deps
+
+## [1.2.0] - 2020-08-17
+
 ### Added
 - rr:class flag (see [issue 73](https://github.com/RMLio/yarrrml-parser/issues/73))
+- Allow multiple input files for the CLI  (see [issue 34](https://github.com/RMLio/yarrrml-parser/issues/34))
+- reference formulation for CSS  (see [issue 37](https://github.com/RMLio/yarrrml-parser/issues/37))
+- Allow multiple input files for the CLI  (see [issue 34](https://github.com/RMLio/yarrrml-parser/issues/34))
+- Overwrite references  (see [issue 35](https://github.com/RMLio/yarrrml-parser/issues/35))
+- Support authors (see [issue 87](https://github.com/RMLio/yarrrml-parser/issues/87))
 
 ### Fixed
 - Condition on mapping when subject has function fails (see [issue 75](https://github.com/RMLio/yarrrml-parser/issues/75))
 - Create blank node as object (see [issue 59](https://github.com/RMLio/yarrrml-parser/issues/59))
+- Condition on mapping with blank node as subject gives error (see [issue 31](https://github.com/RMLio/yarrrml-parser/issues/31))
+
+### Changed
+- Pad suffixes to keep ordering (see [issue 78](https://github.com/RMLio/yarrrml-parser/issues/78))
 
 ## [1.1.1] - 2020-05-11
 
@@ -167,6 +203,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - fix failing test
 - support for recursive functions
 
+[1.2.2]: https://github.com/RMLio/yarrrml-parser/compare/v1.2.1...v1.2.2
+[1.2.1]: https://github.com/RMLio/yarrrml-parser/compare/v1.2.0...v1.2.1
+[1.2.0]: https://github.com/RMLio/yarrrml-parser/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/RMLio/yarrrml-parser/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/RMLio/yarrrml-parser/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/RMLio/yarrrml-parser/compare/v1.0.1...v1.0.2
